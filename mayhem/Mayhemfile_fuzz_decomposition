@@ -1,0 +1,9 @@
+project: savantenvs/brainflow
+target: fuzz_decomposition
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_decomposition/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_decomposition
+    libfuzzer: true
+    timeout: 25

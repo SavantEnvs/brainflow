@@ -1,0 +1,10 @@
+project: savantenvs/brainflow
+target: fuzz_read_file
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_read_file/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_read_file
+    libfuzzer: true
+    timeout: 25
+    dictionary: /mayhem/mayhem/fuzz_read_file/fuzz_read_file.dict

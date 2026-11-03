@@ -1,0 +1,9 @@
+project: savantenvs/brainflow
+target: fuzz_spectral
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_spectral/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_spectral
+    libfuzzer: true
+    timeout: 25

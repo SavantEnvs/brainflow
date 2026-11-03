@@ -1,0 +1,9 @@
+project: savantenvs/brainflow
+target: fuzz_filters
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_filters/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_filters
+    libfuzzer: true
+    timeout: 25
